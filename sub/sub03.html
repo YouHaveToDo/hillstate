@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>힐스테이트 더 운정</title>
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header_wrap">
+      <h1 class="logo">
+        <a href="../index.html">
+          <img src="../images/logo_top.png" alt="">
+        </a>
+      </h1>
+      <nav>
+        <ul>
+          <li class="nav-li">
+            <a href="sub01.html">브랜드 소개</a>
+          </li>
+          <li class="nav-li">
+            <a href="sub02.html">사업개요</a>
+          </li>
+          <li class="nav-li">
+            <a href="sub03.html">입지환경</a>
+          </li>
+          <li class="nav-li">
+            <a href="sub04.html">평형안내</a>
+          </li>
+          <li class="nav-li">
+            <a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor">관심고객등록</a>
+          </li>
+          <li class="nav-li">
+            <a href="tel:1800-5451">전화문의</a>
+          </li>
+        </ul> 
+      </nav>
+      <!-- <div class="phone_box">
+        <img src="images/phone.png" alt="">
+      </div> -->
+    </div>
+  </div>
+  <!-- 모바일 -->
+  <div class="mobile_header">
+    <div class="inner clearfix">
+      <h1 class="logo_top_mobile">
+        <a href="../index.html" ><img src="../images/logo_top.png" alt=""></a>
+      </h1>
+      <div class="menu_mobile">
+        <img src="../images/mobile_menu.png" alt="">
+      </div>
+      <div class="phone_mobile">
+        <a href="tel:1800-5451"><img src="../images/mobile_phone.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <!-- header -->
+  <div class="modal">
+    <div class="side">
+      <ul class="one">
+        <li id="a"><a href="sub01.html">브랜드 소개</a></li>
+        <li id="b"><a href="sub02.html">사업개요</a></li>
+        <li id="c"><a href="sub03.html">입지환경</a></li>
+        <li id="d"><a href="sub04.html">평형안내</a></li>
+        <li><a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor">관심고객등록</a></li>
+        <li><a href="tel:1800-5451">전화문의</a></li>
+      </ul>
+      <p><img src="../images/cancle.png" alt=""></p>
+    </div>
+  </div>
+  <!-- popup -->
+  
+  <!-- side -->
+  <div class="side_btn">
+    <a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor"><img src="../images/interest_cus.jpeg" alt=""></a>
+  </div>
+  <!--  -->
+  <div class="banner sub02">
+    <div class="banner_txt">
+      <p class="title">입지환경</p>
+    </div>
+  </div>
+  <!-- banner -->
+  <div class="content">
+    <div class="inner">
+      <img src="../images/sub03_cont.jpeg" alt="">
+      <img src="../images/sub03_cont02.jpeg" alt="">
+      <img src="../images/sub03_cont03.jpeg" alt="">
+      <img src="../images/sub03_cont04.jpeg" alt="">
+    </div>
+    <div class="contact">
+      <p>CONTACT US</p>
+      <p>모델하우스 위치,청약일정 문의</p>
+      <p><a href="tel:1800-5451">☎‌ 1800-5451</p></a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_wrap">
+      <a href="../index.html"><img src="../images/biglogo.png" alt=""></a>
+      <ul class="li-type01">
+        <li><a href="tel:1800-5451">고객센터 : 1800-5451</a></li>
+        <li><img src="../images/insta.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    $('.nav-li > a').mouseenter(function(){
+      $(this).siblings('ul').addClass('active');
+    });
+    $('.nav-hov').mouseleave(function(){
+      $('.nav-hov').removeClass('active');
+    });
+  </script>
+  <script>
+    $('.nav-hov > li').mouseenter(function(){
+      $(this).css('backgroundColor','#a00f16')
+      $(this).children().css('color','#fff')
+    })
+    $('.nav-hov > li').mouseleave(function(){
+      $(this).css('backgroundColor','#fff')
+      $(this).children().css('color','#494949')
+    })
+  </script>
+  <script>
+    $('.menu_mobile').click(function(){
+      $('.modal').show();
+      $('.side').show()
+    })
+
+    $('.side .one > li').click(function(){
+      let one = $(this).attr('id');
+      $('.'+one).slideToggle();
+    })
+    $('.side > p').click(function(){
+      $('.modal').hide();
+    })
+  </script>
+  <script>
+    $('.close_btn').click(function(){
+      $(this).parents('.pop').hide();
+    })
+  </script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,299 @@
   <title>힐스테이트 더 운정</title>
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- <script src="css/jquery.cookie.js"></script> -->
 </head>
+
 <body>
   <div class="header">
-      <div class="top">
-        <div class="top_wrap wrap">
-          <ul>
-            <li><a href="">사업안내</a></li>
-            <li><a href="">입지환경</a></li>
-            <li><a href="">평형안내</a></li>
-            <li><a href="">단지안내</a></li>
-            <li><a href="">관심고객등록</a></li>
-          </ul>
-          <div class="phone">
-            <img src="images/phone.png" alt="">
-          </div>
-        </div>
-      </div>
+    <div class="header_wrap">
       <h1 class="logo">
         <a href="">
-          <img src="images/logo.png" alt="">
+          <img src="images/logo_top.png" alt="">
         </a>
       </h1>
-  </div>
-  <!-- header -->
-  <div class="content">
-    <div class="main_visual">
-      <img src="images/mimg_1.jpeg" alt="">
+      <nav>
+        <ul>
+          <li class="nav-li">
+            <a href="sub/sub01.html">브랜드 소개</a>
+          </li>
+          <li class="nav-li">
+            <a href="sub/sub02.html">사업개요</a>
+          </li>
+          <li class="nav-li">
+            <a href="sub/sub03.html">입지환경</a>
+          </li>
+          <li class="nav-li">
+            <a href="sub/sub04.html">평형안내</a>
+          </li>
+          <li class="nav-li">
+            <a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor">관심고객등록</a>
+          </li>
+          <li class="nav-li">
+            <a href="tel:1800-5451">전화문의</a>
+          </li>
+        </ul> 
+      </nav>
+      <!-- <div class="phone_box">
+        <img src="images/phone.png" alt="">
+      </div> -->
     </div>
   </div>
+  <!-- 모바일 -->
+  <div class="mobile_header">
+    <div class="inner clearfix">
+      <h1 class="logo_top_mobile">
+        <a href="index.html" ><img src="images/logo_top.png" alt=""></a>
+      </h1>
+      <div class="menu_mobile">
+        <img src="images/mobile_menu.png" alt="">
+      </div>
+      <div class="phone_mobile">
+        <a href="tel:1800-5451"><img src="images/mobile_phone.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <!-- header -->
+  <div class="modal">
+    <div class="side">
+      <ul class="one">
+        <li id="a"><a href="sub/sub01.html">브랜드 소개</a></li>
+        <li id="b"><a href="sub/sub02.html">사업개요</a></li>
+        <li id="c"><a href="sub/sub03.html">입지환경</a></li>
+        <li id="d"><a href="sub/sub04.html">평형안내</a></li>
+        <li><a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor">관심고객등록</a></li>
+        <li><a href="tel:1800-5451">전화문의</a></li>
+      </ul>
+      <p><img src="images/cancle.png" alt=""></p>
+    </div>
+  </div>
+  <!-- side -->
+  <div class="pop01 pop">
+    <a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor"><img src="images/pop01.jpeg" alt=""></a>
+    <ul class="close_choice">
+      <li class="not_today" onclick="closePopupNotToday1()">오늘 하루 보지 않기</li>
+      <li class="close_btn" onclick="closeMainPopup1()">닫기</li>
+    </ul>
+  </div>
+  <div class="pop02 pop">
+    <a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor"><img src="images/pop02.jpeg" alt=""></a>
+    <ul class="close_choice">
+      <li class="not_today" onclick="closePopupNotToday2()">오늘 하루 보지 않기</li>
+      <li class="close_btn" onclick="closeMainPopup2()">닫기</li>
+    </ul>
+  </div>
+  <div class="side_btn">
+    <a target="_blank" href="https://form.office.naver.com/form/responseView.cmd?formkey=Njg5YzhlNDgtYmIzMi00N2Q2LWIyZDUtOGQ0MjMxMDZjOGIx&sourceId=editor"><img src="images/interest_cus.jpeg" alt=""></a>
+  </div>
+  <div class="content">
+    <div class="main_visual">
+      <img src="images/mainv01.jpg" alt="">
+      <img src="images/mainv02.jpg" alt="">
+      <img src="images/mainv03.jpg" alt="">
+      <img src="images/mainv04.jpg" alt="">
+      <img src="images/mainv05.jpg" alt="">
+    </div>
+    <div class="sub_visual">
+      <div class="sub_cont01 sub_cont">
+        <div class="text_box">
+          <p>힐스테이트 더 운정의</p>
+          <p>PREMIUM 1</p>
+          <p>하이엔드 시티</p>
+          <p>브랜드파워 1위 힐스테이트의</p>
+          <p>트렌디한 설계</p>
+        </div>
+        <img src="images/sub01.jpg" alt="" class="sub_img01 sub_img">
+      </div>
+      <div class="sub_cont02 sub_cont">
+        <div class="text_box">
+          <p>힐스테이트 더 운정의</p>
+          <p>PREMIUM 2</p>
+          <p>패스트 시티</p>
+          <p>GTX-A(예정) / 3호선 파주연장(계획) </p>
+          <p>경의중앙선 / 서울문산고속도로 / 제2자유로 등</p>
+        </div>
+        <img src="images/sub02.jpg" alt="" class="sub_img02 sub_img">
+      </div>
+      <div class="sub_cont03 sub_cont">
+        <div class="text_box">
+          <p>힐스테이트 더 운정의</p>
+          <p>PREMIUM 3</p>
+          <p>그린 시티</p>
+          <p>약 72만m2 규모의 생태공원인 운정호수공원</p>
+          <p>소리천변과 연계된 산책로</p>
+        </div>
+        <img src="images/sub03.jpg" alt="" class="sub_img03 sub_img">
+      </div>
+      <div class="sub_cont04 sub_cont">
+        <div class="text_box">
+          <p>힐스테이트 더 운정의</p>
+          <p>PREMIUM 4</p>
+          <p>메가 시티</p>
+          <p>3,413세대 도시규모의 단일 브랜드타운</p>
+          <p>최고 49층의 운정 최고층</p>
+        </div>
+        <img src="images/sub04.jpg" alt="" class="sub_img04 sub_img">
+      </div>
+      <div class="sub_cont05 sub_cont">
+        <div class="text_box">
+          <p>힐스테이트 더 운정의</p>
+          <p>PREMIUM 5</p>
+          <p>하이브리드 시티</p>
+          <p>신세계프라퍼티의 새로운 커뮤니티형 쇼핑공간</p>
+          <p>스타필드 빌리지 단지 내 조성</p>
+        </div>
+        <img src="images/sub05.jpg" alt="" class="sub_img05 sub_img">
+      </div>
+    </div>
+    <div class="contact">
+      <p>CONTACT US</p>
+      <p>모델하우스 위치,청약일정 문의</p>
+      <p><a href="tel:1800-5451">☎‌ 1800-5451</p></a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_wrap">
+      <a href="index.html"><img src="images/biglogo.png" alt=""></a>
+      <ul class="li-type01">
+        <li><a href="tel:1800-5451">고객센터 : 1800-5451</a></li>
+        <li><img src="images/insta.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('.main_visual').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        adaptiveWidth: true,
+        dots: true,
+        fade: true,
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.sub_visual').slick({
+        infinite: true,
+        speed: 300,
+        arrows: false,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        adaptiveWidth: true,
+        dots: true,
+        
+      });
+    });
+  </script>
+  <script>
+    $('.nav-li > a').mouseenter(function(){
+      $(this).siblings('ul').addClass('active');
+    });
+    $('.nav-hov').mouseleave(function(){
+      $('.nav-hov').removeClass('active');
+    });
+  </script>
+  <script>
+    $('.nav-hov > li').mouseenter(function(){
+      $(this).css('backgroundColor','#a00f16')
+      $(this).children().css('color','#fff')
+    })
+    $('.nav-hov > li').mouseleave(function(){
+      $(this).css('backgroundColor','#fff')
+      $(this).children().css('color','#494949')
+    })
+  </script>
+  <script>
+    $('.menu_mobile').click(function(){
+      $('.modal').show();
+      $('.side').show()
+    })
+
+    $('.side .one > li').click(function(){
+      let one = $(this).attr('id');
+      $('.'+one).slideToggle();
+    })
+    $('.side > p').click(function(){
+      $('.modal').hide();
+    })
+  </script>
+  <script>
+    // $('.close_btn').click(function(){
+    //   $(this).parents('.pop').hide();
+    // })
+  </script>
+  <script>
+  
+    
+
+    
+
+function closePopupNotToday1(){	             
+		setCookie('notToday1','Y', 1);
+		$(".pop01").hide();
+}
+function closePopupNotToday2(){	             
+		setCookie('notToday2','Y', 1);
+		$(".pop02").hide();
+}
+function setCookie(name, value, expiredays) {
+	var today = new Date();
+	    today.setDate(today.getDate() + expiredays);
+
+	    document.cookie = name + '=' + escape(value) + '; path=/; expires=' + today.toGMTString() + ';'
+}
+
+function getCookie(name) 
+{ 
+    var cName = name + "="; 
+    var x = 0; 
+    while ( x <= document.cookie.length ) 
+    { 
+        var y = (x+cName.length); 
+        if ( document.cookie.substring( x, y ) == cName ) 
+        { 
+            if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                endOfCookie = document.cookie.length;
+            return unescape( document.cookie.substring( y, endOfCookie ) ); 
+          
+        } 
+        x = document.cookie.indexOf( " ", x ) + 1; 
+        if ( x == 0 ) 
+            break; 
+    } 
+    return ""; 
+}
+function closeMainPopup1(){
+	$(".pop01").hide();
+}
+function closeMainPopup2(){
+	$(".pop02").hide();
+}
+
+    $(function(){    
+        if(getCookie("notToday2") !="Y"){
+            $(".pop02").show();
+        }
+        if(getCookie("notToday1") !="Y"){
+            $(".pop01").show();
+        }
+      
+    });
+    
+  </script>
+  
 </body>
+
 </html>
